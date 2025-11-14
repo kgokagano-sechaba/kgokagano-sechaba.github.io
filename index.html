@@ -30,7 +30,7 @@
   <meta name="twitter:image" content="https://kgokagano-sechaba.github.io/images/og-image.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" href="logo2.png" type="image/png" />
+  <link rel="icon" href="images/logo2.png" type="image/png" />
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,11 +100,26 @@
   *{box-sizing:border-box;margin:0;padding:0;}
   html, body{height:100%; font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; color:#fff;}
   body{
-    /* changed: removed `fixed` to prevent the chair image from being visually cut while scrolling */
-    background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-    background-attachment: scroll; /* ensures continuous background while scrolling */
+    /* base page color (fallback) */
+    background-color: #071026;
     -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    position:relative;
   }
+  /* fixed image layer so it never "cuts" between sections */
+  body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* put behind all content */
+    transform: translateZ(0); /* help rendering */
+  }
+  /* ensure sections/panels sit above the bg */
+  header, .logo-section, .hero, .section, .call-to-action, footer { position: relative; z-index: 1; background: transparent; }
   header.navbar{position:sticky;top:0;z-index:1200;background:rgba(12,8,28,0.85);padding:12px 20px;border-bottom:1px solid rgba(255,255,255,0.1);}
   .nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
   .logo-link{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--muted);}
@@ -174,7 +189,7 @@
 <header class="navbar" role="banner">
   <div class="nav-container">
     <a href="index.html" class="logo-link" aria-label="Kgokagano-Sechaba home">
-      <img src="logo2.png" alt="Kgokagano-Sechaba logo" class="logo-img-nav">
+      <img src="images/logo2.png" alt="Kgokagano-Sechaba logo" class="logo-img-nav">
       <span class="brand-heading">Kgokagano-Sechaba</span>
     </a>
     <input type="checkbox" id="menu-toggle" aria-hidden="true">
@@ -197,7 +212,7 @@
 
 <!-- LOGO UNDER NAVBAR -->
 <div class="logo-section">
-  <img src="logo2.png" alt="Kgokagano-Sechaba logo" class="logo-img">
+  <img src="images/logo2.png" alt="Kgokagano-Sechaba logo" class="logo-img">
 </div>
 
 <!-- HERO -->
