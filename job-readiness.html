@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO Meta Tags -->
+<title>Kgokagano-Sechaba | Job Readiness</title>
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<meta name="description" content="Prepare for employment with Kgokagano-Sechaba Job Readiness programs. Gain skills, mentorship, and support for career success.">
+<meta name="keywords" content="job readiness, employment programs, career support, Kgokagano-Sechaba, skills development, mentorship">
+<meta name="author" content="Kgokagano-Sechaba Community Centre">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kgokagano-Sechaba | Job Readiness">
+<meta property="og:description" content="Prepare for employment with Kgokagano-Sechaba Job Readiness programs. Gain skills, mentorship, and support for career success.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80">
+<meta property="og:url" content="https://www.kgokagano-sechaba.org/job-readiness.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kgokagano-Sechaba | Job Readiness">
+<meta name="twitter:description" content="Prepare for employment with Kgokagano-Sechaba Job Readiness programs. Gain skills, mentorship, and support for career success.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80">
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/3e7e0b7e2e.js" crossorigin="anonymous" defer></script>
+
+<!-- Styles -->
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:100%; font-family:'Montserrat', sans-serif; color:#fff; line-height:1.6; }
+body {
+  min-height:100vh;
+  background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat fixed;
+}
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  background: linear-gradient(120deg, rgba(45,34,90,0.4) 40%, rgba(124,58,237,0.2) 100%);
+  z-index:0;
+  pointer-events:none;
+}
+
+/* Navbar */
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#2d225a; position:sticky; top:0; z-index:10; }
+.navbar .logo { font-family:'Pacifico', cursive; font-size:2rem; color:#fff; text-decoration:none; }
+nav ul { display:flex; list-style:none; gap:1rem; }
+nav ul li a { text-decoration:none; color:#fff; padding:0.5rem 1rem; border-radius:6px; transition:0.3s; }
+nav ul li a:hover, nav ul li a.active { background:#7c3aed; }
+.donate-btn { background:#7c3aed; font-weight:700; }
+.donate-btn:hover { background:#f472b6; }
+
+#menu-toggle { display:none; }
+.menu-icon { display:none; flex-direction:column; cursor:pointer; width:30px; height:22px; justify-content:space-between; }
+.menu-icon span { height:3px; width:100%; background:#fff; transition:0.3s; }
+#menu-toggle:checked + .menu-icon span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+#menu-toggle:checked + .menu-icon span:nth-child(2) { opacity:0; }
+#menu-toggle:checked + .menu-icon span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+@media (max-width:768px){ nav ul { display:none; flex-direction:column; background:#2d225a; width:100%; margin-top:0.5rem; border-radius:0 0 12px 12px; overflow:hidden; } #menu-toggle:checked ~ nav ul { display:flex; } .menu-icon { display:flex; } }
+
+/* Hero */
+.hero { position:relative; min-height:60vh; display:flex; align-items:center; justify-content:center; text-align:center; z-index:1; }
+.hero::before { content:""; position:absolute; inset:0; background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(45,34,90,0.3)); z-index:0; }
+.hero-content { position:relative; z-index:1; padding:2rem; max-width:800px; }
+.hero-content h1 { font-family:'Pacifico', cursive; font-size:3rem; color:#f472b6; margin-bottom:1rem; text-shadow:0 2px 8px #0008; }
+.hero-content p { font-size:1.2rem; text-shadow:0 2px 8px #0008; }
+
+/* Sections */
+.section { max-width:1100px; margin:2rem auto; padding:2rem 1rem; }
+
+/* Cards */
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; }
+.card { background:rgba(45,34,90,0.7); border-radius:12px; padding:1.5rem; box-shadow:0 6px 24px rgba(124,58,237,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease; }
+.card:hover { transform:translateY(-6px); box-shadow:0 12px 32px rgba(124,58,237,0.25); }
+.card h3 { color:#f472b6; margin-bottom:0.8rem; font-size:1.4rem; }
+.card p { font-size:1rem; margin-bottom:1rem; }
+
+/* Call-to-action */
+.call-to-action { background:rgba(45,34,90,0.75); border-radius:16px; padding:2rem; text-align:center; margin-top:2rem; box-shadow:0 4px 24px rgba(124,58,237,0.15); }
+.call-to-action h2 { font-family:'Pacifico', cursive; font-size:2.5rem; margin-bottom:1rem; color:#f472b6; }
+.call-to-action p { margin-bottom:1.5rem; }
+.btn { font-family:'Pacifico', cursive; background:#7c3aed; color:#fff; font-weight:700; padding:0.8rem 1.2rem; border-radius:10px; text-decoration:none; display:inline-block; transition:0.3s; }
+.btn:hover { background:#f472b6; transform:translateY(-2px); }
+
+/* Footer */
+footer { text-align:center; padding:1.5rem; background:#2d225a; font-size:0.9rem; color:#fff; }
+
+/* Responsive */
+@media(max-width:900px){ .hero-content h1 { font-size:2rem; } .hero-content p { font-size:1rem; } }
+</style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VR26VVKDB5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VR26VVKDB5');
+</script>
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Kgokagano-Sechaba | Job Readiness">
+<meta property="og:description" content="Prepare for employment with Kgokagano-Sechaba Job Readiness programs. Gain skills, mentorship, and support for career success.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80">
+<meta property="og:url" content="https://www.kgokagano-sechaba.org/job-readiness.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kgokagano-Sechaba | Job Readiness">
+<meta name="twitter:description" content="Prepare for employment with Kgokagano-Sechaba Job Readiness programs. Gain skills, mentorship, and support for career success.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=80">
+
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">Kgokagano-Sechaba</a>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="report.html">Report</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="donate-btn">Donate</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Job Readiness</h1>
+    <p>Equipping survivors with the skills, confidence, and tools to secure meaningful employment and thrive in the workplace.</p>
+  </div>
+</div>
+
+<section class="section">
+  <h2 class="section-title">Our Programs</h2>
+  <div class="cards-grid">
+    <div class="card">
+      <h3>Resume Writing & Interview Prep</h3>
+      <p>Guidance on creating professional resumes and cover letters, plus interview skills workshops to impress employers.</p>
+    </div>
+    <div class="card">
+      <h3>Career Counseling</h3>
+      <p>Personalized support to identify strengths, explore career paths, and set actionable employment goals.</p>
+    </div>
+    <div class="card">
+      <h3>Workplace Skills & Etiquette</h3>
+      <p>Training on communication, teamwork, punctuality, and professional behavior to succeed in any job environment.</p>
+    </div>
+    <div class="card">
+      <h3>Internship & Placement Support</h3>
+      <p>Connecting participants to local internships, job shadowing, and employment opportunities for real-world experience.</p>
+    </div>
+  </div>
+</section>
+
+<section class="call-to-action">
+  <h2>Step Confidently Into Your Career</h2>
+  <p>Join our job readiness training and take the first step towards stable employment and long-term success. Your future starts here.</p>
+  <a href="enroll.html" class="btn">Join the Program</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 Kgokagano-Sechaba Community Centre — Empowering Survivors, Building Hope</p>
+  <p>NPO Registration Number: 325-667</p>
+</footer>
+
+</body>
+</html>

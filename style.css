@@ -1,0 +1,97 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: linear-gradient(135deg,var(--bg-1),var(--bg-2));
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Header / navbar: solid translucent bar to match homepage (no glass blur) */
+header.navbar{
+  position:sticky;top:0;z-index:1400;
+  background: linear-gradient(180deg, rgba(10,6,30,0.78), rgba(10,6,30,0.85));
+  padding:14px 28px;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:12px;justify-content:space-between}
+.logo-link{display:inline-flex;align-items:center;text-decoration:none;color:var(--text)}
+.logo-img{height:44px;width:auto;margin-right:10px}
+.brand-heading{font-family:'Pacifico',cursive;color:var(--text);font-size:1.05rem}
+
+/* Nav menu */
+#main-menu{list-style:none;display:flex;gap:20px;align-items:center;margin-left:auto}
+#main-menu a{color:var(--muted);text-decoration:none;font-weight:700;padding:8px 12px;border-radius:8px;transition:all .14s;}
+#main-menu a:hover,#main-menu a.active{color:#fff;background:rgba(255,255,255,0.04);transform:translateY(-2px)}
+.donate-btn{background:linear-gradient(90deg,var(--accent-1),#ff9ecf);color:#fff;padding:8px 12px;border-radius:12px}
+
+/* mobile */
+#menu-toggle{position:absolute;left:-9999px}
+.menu-icon{display:none}
+@media(max-width:880px){
+  .menu-icon{display:flex;width:46px;height:40px;align-items:center;justify-content:center;cursor:pointer}
+  #main-menu{position:fixed;right:16px;top:68px;flex-direction:column;background:rgba(6,4,22,0.96);padding:12px;border-radius:10px;display:none}
+  #menu-toggle:checked + .menu-icon + #main-menu{display:flex}
+}
+
+/* Hero (same look as homepage) */
+.hero{padding:6rem 0 3rem;display:flex;align-items:center;justify-content:center;text-align:center}
+.script-heading{font-family:'Pacifico',cursive;font-size:3.2rem;color:var(--accent-1);text-shadow:0 8px 30px rgba(10,6,30,0.6);margin-bottom:.6rem}
+.hero-mission{max-width:860px;margin:0 auto;color:var(--muted);font-size:1.05rem;line-height:1.7}
+
+/* Main / report layout (no glass) */
+main{padding:24px 20px 60px}
+.container{max-width:1200px;margin:0 auto}
+.report-panel{
+  background: linear-gradient(180deg, rgba(8,6,30,0.9), rgba(24,10,50,0.92));
+  border-radius:12px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 40px rgba(6,4,22,0.6);
+}
+
+/* grid */
+.report-grid{display:grid;grid-template-columns:1fr 340px;gap:22px;align-items:start}
+@media(max-width:880px){ .report-grid{grid-template-columns:1fr} }
+
+/* form controls */
+.label{display:block;color:var(--muted);font-weight:700;margin:10px 0 6px}
+.input, select, textarea, .input-file{
+  width:100%;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);color:var(--text);
+  transition:box-shadow .12s,transform .12s,border-color .12s;outline:none;font-size:.95rem;
+}
+.input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.6)}
+.input:focus, textarea:focus, select:focus{box-shadow:0 10px 30px rgba(60,30,120,0.12);border-color:rgba(244,114,182,0.9);transform:translateY(-2px)}
+.input-multiline{min-height:140px;resize:vertical}
+
+/* form layout helpers */
+.form-row{display:flex;gap:12px}
+@media(max-width:880px){ .form-row{flex-direction:column} }
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;border-radius:999px;padding:10px 16px;font-weight:800}
+.btn-primary{background:linear-gradient(90deg,var(--accent-1),#ff95c8);color:#fff;box-shadow:0 12px 40px rgba(244,114,182,0.12)}
+.btn-secondary{background:rgba(255,255,255,0.04);color:#fff;border:1px solid rgba(255,255,255,0.04)}
+
+/* side card */
+.side-card{background:rgba(255,255,255,0.03);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.side-card h3{color:var(--accent-1);margin:0 0 8px}
+.side-card p, .side-card li{color:var(--muted);}
+
+/* footer */
+.footer-content{padding:18px 20px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+/* utilities */
+.section-title{font-size:1.6rem;color:#efeaff;margin-bottom:6px}
+.small-note{color:rgba(255,255,255,0.85);margin-bottom:10px}
+
+/* accessibility */
+:focus{outline-offset:3px}
+
+
+

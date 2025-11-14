@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' https: data:;">
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- SEO Meta Tags -->
+<title>Kgokagano-Sechaba | Donate</title>
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<meta name="description" content="Support Kgokagano-Sechaba Community Centre by making a donation. Help fund our programs and make a positive impact in the community.">
+<meta name="keywords" content="donate, Kgokagano Sechaba, support, community, charity, contributions, funding programs">
+<meta name="author" content="Kgokagano-Sechaba Community Centre">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kgokagano-Sechaba | Donate">
+<meta property="og:description" content="Support Kgokagano-Sechaba Community Centre by making a donation. Help fund our programs and make a positive impact in the community.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80">
+<meta property="og:url" content="https://www.kgokagano-sechaba.org/donate.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kgokagano-Sechaba | Donate">
+<meta name="twitter:description" content="Support Kgokagano-Sechaba Community Centre by making a donation. Help fund our programs and make a positive impact in the community.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80">
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/3e7e0b7e2e.js" crossorigin="anonymous" defer></script>
+
+<!-- Styles -->
+<style>
+* { box-sizing: border-box; margin:0; padding:0; }
+html, body { height:100%; font-family:'Montserrat', sans-serif; color:#fff; }
+
+/* Make background pop like index: slightly darker but NOT purple */
+body {
+  min-height:100vh;
+  background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat fixed;
+}
+/* INDEX-LIKE OVERLAY: subtle darkening so background image shows through consistently */
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,0.28); /* match index overlay strength */
+  z-index:0;
+  pointer-events:none;
+}
+
+.navbar {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem; background:#2d225a; position:sticky; top:0; z-index:10;
+}
+.navbar .logo { font-family:'Pacifico', cursive; font-size:2rem; color:#fff; text-decoration:none; }
+nav ul { display:flex; list-style:none; gap:1rem; }
+nav ul li a { text-decoration:none; color:#fff; padding:0.5rem 1rem; border-radius:6px; transition:0.3s; }
+nav ul li a:hover, nav ul li a.active { background:#7c3aed; }
+.donate-btn { background:#7c3aed; font-weight:700; }
+.donate-btn:hover { background:#f472b6; }
+
+#menu-toggle { display:none; }
+.menu-icon { display:none; flex-direction:column; cursor:pointer; width:30px; height:22px; justify-content:space-between; }
+.menu-icon span { height:3px; width:100%; background:#fff; transition:0.3s; }
+#menu-toggle:checked + .menu-icon span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+#menu-toggle:checked + .menu-icon span:nth-child(2) { opacity:0; }
+#menu-toggle:checked + .menu-icon span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+@media(max-width:768px){
+  nav ul { display:none; flex-direction:column; background:#2d225a; width:100%; margin-top:0.5rem; border-radius:0 0 12px 12px; overflow:hidden; }
+  #menu-toggle:checked ~ nav ul { display:flex; }
+  .menu-icon { display:flex; }
+}
+
+.hero { position:relative; min-height:50vh; display:flex; align-items:center; justify-content:center; text-align:center; z-index:1; }
+.hero::before { 
+  content:""; position:absolute; inset:0; background: rgba(0,0,0,0.12); z-index:0;
+}
+.hero-content { position:relative; z-index:1; padding:2rem; }
+.hero-content h1 { font-family:'Pacifico', cursive; font-size:3rem; color:#f472b6; margin-bottom:1rem; text-shadow:0 2px 8px #0008; }
+.hero-content p { font-size:1.2rem; text-shadow:0 2px 8px #0008; }
+
+.section { max-width:1000px; margin:2rem auto; padding:2rem 1rem; z-index:1; }
+.section-title { font-size:2.2rem; text-align:center; margin-bottom:2rem; }
+
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; }
+.card {
+  background: rgba(45,34,90,0.7); border-radius:12px; padding:1.5rem; text-align:center;
+  transition:0.2s; box-shadow:0 4px 24px rgba(124,58,237,0.1); cursor:pointer; display:flex; flex-direction:column; justify-content:space-between;
+}
+.card img { height:50px; margin-bottom:0.8rem; object-fit:contain; }
+.card h3 { margin-bottom:0.7rem; color:#f472b6; font-size:1.2rem; }
+.card p { color:#fff; font-size:1rem; margin-bottom:1rem; }
+.card a { display:inline-block; margin-top:auto; padding:0.6rem 1.2rem; border-radius:8px; background:#7c3aed; color:#fff; text-decoration:none; font-weight:700; transition:0.3s; }
+.card a:hover { background:#f472b6; }
+.card:hover { transform:translateY(-3px); box-shadow:0 8px 32px rgba(124,58,237,0.2); }
+
+.call-to-action { background: rgba(45,34,90,0.7); border-radius:16px; padding:2rem; text-align:center; margin-top:2rem; }
+.call-to-action h2 { font-family:'Pacifico', cursive; font-size:2.5rem; margin-bottom:1rem; color:#f472b6; }
+.call-to-action a { margin-top:1rem; display:inline-block; padding:0.8rem 1.2rem; border-radius:8px; background:#7c3aed; color:#fff; text-decoration:none; font-weight:700; transition:0.3s; }
+.call-to-action a:hover { background:#f472b6; }
+
+/* FOOTER: exact, solid dark footer used on index (remove semi-transparent purple) */
+.ultra-footer, footer {
+  background: #071026;                 /* solid dark navy matching index */
+  padding: 2rem 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 2;                          /* ensure footer sits above the page overlay */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.footer-col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f472b6;
+}
+.footer-col ul { list-style: none; padding: 0; margin: 0; width: 100%; }
+.footer-col ul li { margin-bottom: 0.5rem; }
+.footer-col ul li a { color: #fff; text-decoration: none; transition: 0.2s; }
+.footer-col ul li a:hover { text-decoration: underline; color: #f472b6; }
+.footer-contact { align-items: flex-start; }
+.social-icons { display: flex; gap: 1rem; margin-top: 0.5rem; }
+.social-icons a { color: #fff; font-size: 1.2rem; transition: 0.2s; background: rgba(0,0,0,0.25); padding:8px; border-radius:6px; display:inline-flex; align-items:center; justify-content:center; }
+.social-icons a:hover { color: #f472b6; background: rgba(255,255,255,0.03); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* Keep responsive rules */
+@media(max-width:768px){
+  .cards { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr; }
+}
+</style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VR26VVKDB5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VR26VVKDB5');
+</script>
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Kgokagano-Sechaba | Donate">
+<meta property="og:description" content="Support Kgokagano-Sechaba Community Centre by making a donation. Help fund our programs and make a positive impact in the community.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80">
+<meta property="og:url" content="https://www.kgokagano-sechaba.org/donate.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kgokagano-Sechaba | Donate">
+<meta name="twitter:description" content="Support Kgokagano-Sechaba Community Centre by making a donation. Help fund our programs and make a positive impact in the community.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80">
+
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">Kgokagano-Sechaba</a>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="report.html">Report</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="active donate-btn">Donate</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Support Our Mission</h1>
+    <p>Every donation counts. Help survivors of gender-based violence reclaim their lives.</p>
+  </div>
+</div>
+
+<section class="section">
+  <h2 class="section-title">Donate Options</h2>
+  <div class="cards">
+    <!-- Bank Transfer -->
+    <div class="card">
+      <h3>Bank Transfer</h3>
+      <p>
+        <strong>Account Name:</strong> Kgokagano-Sechaba Community Centre<br>
+        <strong>Account Number:</strong> 10260568951<br>
+        <strong>Bank:</strong> MyMoBiz<br>
+        <strong>Branch:</strong> Maponya Mall<br>
+        <strong>Branch Code:</strong> 004706<br>
+        <strong>Electronic Payment Code:</strong> 051001<br>
+        <strong>SWIFT:</strong> SBZA ZA JJ
+      </p>
+    </div>
+
+    <!-- Kind Donations -->
+    <div class="card">
+      <h3>Kind Donations</h3>
+      <p>Clothes, food, blankets, and other essentials. Drop-off at our center or contact us for collection.</p>
+      <a href="contact.html">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="call-to-action">
+  <h2>#WeRiseTogether</h2>
+  <p>Every contribution helps build hope and safety for survivors. Thank you for supporting Kgokagano-Sechaba.</p>
+  <a href="contact.html">Contact Us</a>
+</section>
+
+<!-- remove existing footer block and replace with the unified footer -->
+<footer class="ultra-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="report.html">Get Help Now</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="donate.html">Donate / Pledge</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h3>Contact Us</h3>
+      <p>24/7: <strong>065 966 6216</strong></p>
+      <p>Email: <a href="mailto:kgokagano.npo@gmail.com" style="color:#fff; text-decoration:underline;">kgokagano.npo@gmail.com</a></p>
+      <div class="social-icons">
+        <a href="https://facebook.com/yourprofile" target="_blank" class="fa fa-facebook" aria-label="Facebook"></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>GBV in South Africa</h3>
+      <p>South Africa faces high rates of gender-based violence. Survivors often encounter challenges such as limited access to legal support, poverty, and unsafe environments. Kgokagano-Sechaba provides trauma-informed counseling, temporary shelter, legal advocacy, and community awareness programs.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Kgokagano-Sechaba Community Centre — Empowering Survivors, Building Hope
+    <p>NPO Registration Number: 325-667</p>
+  </div>
+</footer>
+
+</body>
+</html>

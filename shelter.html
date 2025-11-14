@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kgokagano-Sechaba | Shelter & Essentials</title>
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<meta name="description" content="Discover Kgokagano-Sechaba’s shelter and essentials programs, providing support and resources to the community.">
+<meta name="keywords" content="shelter, essentials, community support, Kgokagano-Sechaba, aid">
+<meta name="author" content="Kgokagano-Sechaba Community Centre">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kgokagano-Sechaba | Shelter & Essentials">
+<meta property="og:description" content="Discover Kgokagano-Sechaba’s shelter and essentials programs, providing support and resources to the community.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80">
+<meta property="og:url" content="https://www.kgokagano-sechaba.org/shelter.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kgokagano-Sechaba | Shelter & Essentials">
+<meta name="twitter:description" content="Discover Kgokagano-Sechaba’s shelter and essentials programs, providing support and resources to the community.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80">
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/3e7e0b7e2e.js" crossorigin="anonymous" defer></script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css">
+<style>
+/* Consistent Global & Navbar Styles */
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:100%; font-family:'Montserrat',sans-serif; color:#fff; }
+body { min-height:100vh; background:url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat fixed; line-height:1.6; }
+
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#2d225a; position:sticky; top:0; z-index:10; }
+.navbar .logo img { height:50px; }
+nav ul { display:flex; list-style:none; gap:1rem; }
+nav ul li a { text-decoration:none; color:#fff; padding:0.5rem 1rem; border-radius:6px; transition:0.3s; }
+nav ul li a:hover, nav ul li a.active { background:#7c3aed; }
+.donate-btn { background:#7c3aed; font-weight:700; }
+.donate-btn:hover { background:#f472b6; }
+
+#menu-toggle { display:none; }
+.menu-icon { display:none; flex-direction:column; cursor:pointer; width:30px; height:22px; justify-content:space-between; }
+.menu-icon span { height:3px; width:100%; background:#fff; transition:0.3s; }
+#menu-toggle:checked + .menu-icon span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+#menu-toggle:checked + .menu-icon span:nth-child(2) { opacity:0; }
+#menu-toggle:checked + .menu-icon span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+@media(max-width:768px){ nav ul{display:none;flex-direction:column;background:#2d225a;width:100%;margin-top:0.5rem;border-radius:0 0 12px 12px;} #menu-toggle:checked ~ nav ul{display:flex;} .menu-icon{display:flex;} }
+
+/* Hero */
+.hero-content { text-align:center; margin:0 auto; padding:7rem 1rem 3rem; max-width:800px; }
+.hero-content h1 { font-family:'Pacifico', cursive; font-size:3rem; color:#f472b6; margin-bottom:1rem; text-shadow:0 2px 8px #0008; }
+.hero-content p { font-size:1.2rem; text-shadow:0 2px 8px #0008; }
+
+/* Sections & Panels */
+.section { max-width:900px; margin:2rem auto; padding:2rem 1rem; text-align:center; }
+.section-title { font-size:2.2rem; margin-bottom:2rem; }
+.shelter-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+.panel, .feature { background:rgba(45,34,90,0.7); padding:1.5rem; border-radius:12px; box-shadow:0 4px 24px rgba(124,58,237,0.1); }
+.feature { margin-bottom:1rem; }
+.panel h2, .panel h3 { color:#f472b6; margin-top:0; }
+.panel p, .feature p { color:#fff; margin:0.5rem 0 0; }
+.panel a.btn { margin-top:1rem; }
+
+/* CTA & Footer */
+.call-to-action { background:rgba(45,34,90,0.7); border-radius:16px; padding:2rem; text-align:center; margin-top:2rem; }
+.call-to-action h2 { font-family:'Pacifico', cursive; font-size:2.5rem; margin-bottom:1rem; color:#f472b6; }
+.call-to-action p { font-size:1.1rem; color:#fff; }
+.btn { background:#7c3aed; color:#fff; font-weight:700; padding:0.8rem 1.2rem; border-radius:8px; text-decoration:none; display:inline-block; transition:0.3s; }
+.btn:hover { background:#f472b6; }
+
+footer { text-align:center; padding:1.5rem; background:#2d225a; font-size:0.9rem; color:#fff; }
+
+/* Responsive */
+@media(max-width:768px){ .shelter-grid { grid-template-columns:1fr; } .hero-content h1 { font-size:2rem; } .hero-content p { font-size:1rem; } }
+</style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VR26VVKDB5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VR26VVKDB5');
+</script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo"><img src="images/logo.svg" alt="Kgokagano-Sechaba Logo"></a>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="report.html">Report</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="donate-btn">Donate</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero-content">
+  <h1>Shelter & Essentials</h1>
+  <p>Safe short-term accommodation, basics, and child-friendly support to stabilise immediate needs.</p>
+</div>
+
+<section class="section">
+  <div class="shelter-grid">
+    <div class="panel">
+      <h2>Shelter Services</h2>
+      <div class="feature"><strong>Emergency placement</strong><p>Confidential, immediate placement for survivors and dependants.</p></div>
+      <div class="feature"><strong>Essentials provision</strong><p>Food, clothing, hygiene supplies, and child items provided while in shelter.</p></div>
+      <div class="feature"><strong>Safe transport</strong><p>Assistance with discreet transport to intake and medical appointments.</p></div>
+      <div class="feature"><strong>Short-stay case management</strong><p>Intake, risk assessment, and planning for next steps — reunification, long-term housing or referrals.</p></div>
+    </div>
+
+    <aside class="panel" aria-label="Shelter details">
+      <h3>Accessing Shelter</h3>
+      <p>Call the confidential helpline for immediate placement: <a href="tel:0800123456" style="color:#fff;text-decoration:underline;">0659666216</a>. If safe to do so, we will arrange transport and intake.</p>
+      <a href="contact.html" class="btn">Request Shelter</a>
+      <p style="margin-top:1rem;"><strong>Note:</strong> Shelter is time-limited and based on need and availability. We prioritise safety and confidentiality.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="call-to-action">
+  <h2>Safe Spaces Save Lives</h2>
+  <p>We provide immediate safety and short-term support — call the helpline if you need urgent help.</p>
+  <a href="report.html" class="btn">Report an Incident</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 Kgokagano-Sechaba Community Centre — Empowering Survivors, Building Hope</p>
+  <p>NPO Registration Number: 325-667</p>
+</footer>
+
+</body>
+</html>
