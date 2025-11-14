@@ -1,307 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Kgokagano-Sechaba Community Centre</title>
 
-<!-- SEO Meta Tags -->
-<meta name="description" content="About Kgokagano-Sechaba — Learn about our mission, vision, and the team empowering survivors of Gender-Based Violence.">
-<meta name="keywords" content="GBV, gender-based violence, about, community support, empowerment, shelter, counseling">
-<meta name="author" content="Kgokagano-Sechaba Community Centre">
+  <!-- Primary SEO -->
+  <meta name="description" content="Kgokagano-Sechaba Community Centre supports survivors of gender-based violence in Lawley Extension 2 and surrounding areas through shelter, counselling, legal advocacy and skills development." />
+  <meta name="keywords" content="Kgokagano Sechaba, Kgokagano-Sechaba Community Centre, GBV, gender-based violence, shelter, counselling, South Africa" />
+  <meta name="author" content="Kgokagano-Sechaba Community Centre" />
+  <link rel="canonical" href="https://kgokagano-sechaba.github.io/about.html" />
+  <meta name="robots" content="index,follow" />
 
-<!-- Open Graph for social sharing -->
-<meta property="og:title" content="Kgokagano-Sechaba — About">
-<meta property="og:description" content="Discover our mission, vision, and the team committed to supporting survivors of Gender-Based Violence.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80">
-<meta property="og:url" content="https://yourdomain.com/about.html">
-<meta property="og:type" content="website">
+  <!-- Open Graph -->
+  <meta property="og:locale" content="en_ZA" />
+  <meta property="og:site_name" content="Kgokagano-Sechaba Community Centre" />
+  <meta property="og:title" content="About — Kgokagano-Sechaba Community Centre" />
+  <meta property="og:description" content="Learn about our mission, vision and core programs. Kgokagano-Sechaba provides shelter, counselling and empowerment programs for survivors of gender-based violence." />
+  <meta property="og:image" content="https://kgokagano-sechaba.github.io/images/og-image.jpg" />
+  <meta property="og:image:alt" content="Kgokagano-Sechaba Community Centre — community support" />
+  <meta property="og:url" content="https://kgokagano-sechaba.github.io/about.html" />
+  <meta property="og:type" content="article" />
 
-<title>Kgokagano-Sechaba | About</title>
-<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About — Kgokagano-Sechaba Community Centre" />
+  <meta name="twitter:description" content="Learn about our mission, vision and core programs supporting survivors of gender-based violence in South Africa." />
+  <meta name="twitter:image" content="https://kgokagano-sechaba.github.io/images/og-image.jpg" />
 
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/3e7e0b7e2e.js" crossorigin="anonymous" defer></script>
+  <!-- Favicon -->
+  <link rel="icon" href="/logo2.png" type="image/png" />
 
-<!-- Styles -->
-<style>
-/* Global */
-* { box-sizing:border-box; margin:0; padding:0; }
-html, body { height:100%; }
-body {
-  font-family:'Montserrat', sans-serif;
-  color:#fff;
-  line-height:1.6;
-  background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat fixed;
-  min-height:100vh;
-}
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
-/* Navbar */
-.navbar {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:1rem 2rem; background:#2d225a; position:sticky; top:0; z-index:10;
-}
-.navbar .logo { font-family:'Pacifico', cursive; font-size:2rem; color:#fff; text-decoration:none; }
-nav ul { display:flex; list-style:none; gap:1rem; }
-nav ul li a { text-decoration:none; color:#fff; padding:0.5rem 1rem; border-radius:6px; transition:0.3s; }
-nav ul li a:hover, nav ul li a.active { background:#7c3aed; }
-.donate-btn { background:#7c3aed; font-weight:700; }
-.donate-btn:hover { background:#f472b6; }
+  <!-- Structured Data (NGO + WebPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "NGO",
+        "@id": "https://kgokagano-sechaba.github.io/#org",
+        "name": "Kgokagano-Sechaba Community Centre",
+        "url": "https://kgokagano-sechaba.github.io/",
+        "logo": "https://kgokagano-sechaba.github.io/logo2.png",
+        "description": "Kgokagano-Sechaba provides shelter, counselling, legal advocacy and skills development to survivors of gender-based violence in South Africa.",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+27659666216",
+            "contactType": "Customer Support",
+            "email": "kgokagano.npo@gmail.com"
+          }
+        ],
+        "sameAs": [
+          "https://facebook.com/yourprofile",
+          "https://instagram.com/yourprofile"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://kgokagano-sechaba.github.io/about.html#webpage",
+        "url": "https://kgokagano-sechaba.github.io/about.html",
+        "name": "About",
+        "isPartOf": { "@id": "https://kgokagano-sechaba.github.io/#org" },
+        "description": "About page for Kgokagano-Sechaba Community Centre — mission, programs, and code of conduct."
+      }
+    ]
+  }
+  </script>
 
-/* Mobile Menu */
-#menu-toggle { display:none; }
-.menu-icon { display:none; flex-direction:column; cursor:pointer; width:30px; height:22px; justify-content:space-between; }
-.menu-icon span { height:3px; width:100%; background:#fff; transition:0.3s; }
-#menu-toggle:checked + .menu-icon span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
-#menu-toggle:checked + .menu-icon span:nth-child(2) { opacity:0; }
-#menu-toggle:checked + .menu-icon span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
-@media (max-width:768px) {
-  nav ul { display:none; flex-direction:column; background:#2d225a; width:100%; margin-top:0.5rem; border-radius:0 0 12px 12px; overflow:hidden; }
-  #menu-toggle:checked ~ nav ul { display:flex; }
-  .menu-icon { display:flex; }
-}
-
-/* Hero */
-.hero {
-  position:relative;
-  min-height:50vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-.hero::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(120deg, rgba(45,34,90,0.7) 60%, rgba(124,58,237,0.5) 100%);
-}
-.hero-content { position:relative; z-index:1; padding:2rem; }
-.hero-content h1 { font-family:'Pacifico', cursive; font-size:3rem; }
-.hero-content p { font-size:1.2rem; }
-
-/* Sections */
-.section {
-  max-width:1100px;
-  margin:2rem auto;
-  padding:2rem 1rem;
-  background:rgba(45,34,90,0.7);
-  border-radius:12px;
-}
-.section-title {
-  text-align:center;
-  font-size:2rem;
-  margin-bottom:1.5rem;
-  color:#f472b6;
-}
-
-/* Cards */
-.cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
-.card {
-  background:rgba(45,34,90,0.85);
-  border-radius:12px;
-  padding:1.5rem;
-  transition:0.3s;
-}
-.card h3 { margin-bottom:0.8rem; color:#f472b6; }
-.card p { font-size:1rem; }
-
-/* Meet Team Button */
-.meet-team-btn {
-  display:inline-block;
-  font-family:'Pacifico', cursive;
-  background:#7c3aed;
-  color:#fff;
-  font-weight:700;
-  padding:0.8rem 1.5rem;
-  border-radius:12px;
-  text-decoration:none;
-  transition:0.3s;
-  margin-top:2rem;
-}
-.meet-team-btn:hover {
-  background:#f472b6;
-  transform:translateY(-2px);
-}
-
-/* Unified footer CSS - paste into every page's <style> (replace any old footer rules) */
-.ultra-footer, footer {
-  background: #071026;
-  padding: 2rem 1rem;
-  color: #fff;
-  text-align: center;
-  font-size: 0.95rem;
-  position: relative;
-  z-index: 2;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-.footer-col {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-.footer-col h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: #f472b6;
-}
-.footer-col ul { list-style: none; padding: 0; margin: 0; width: 100%; }
-.footer-col ul li { margin-bottom: 0.5rem; }
-.footer-col ul li a { color: #fff; text-decoration: none; transition: 0.2s; }
-.footer-col ul li a:hover { color: #f472b6; text-decoration: underline; }
-.footer-contact { align-items: flex-start; }
-.social-icons { display: flex; gap: 0.75rem; margin-top: 0.5rem; }
-.social-icons a {
-  color: #fff;
-  font-size: 1.05rem;
-  background: rgba(0,0,0,0.25);
-  padding: 8px;
-  border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.social-icons a:hover { color: #f472b6; background: rgba(255,255,255,0.03); }
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.06);
-  padding-top: 1rem;
-  margin-top: 1rem;
-}
-@media (max-width:768px) {
-  .footer-grid { grid-template-columns: 1fr; }
-}
-</style>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VR26VVKDB5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-VR26VVKDB5');
-</script>
+  <!-- Inline critical CSS for fast first paint (kept small) -->
+  <style>
+    :root{
+      --bg-dark:#0b1220;
+      --panel:rgba(45,34,90,0.78);
+      --muted:rgba(255,255,255,0.92);
+      --accent:#f472b6;
+      --accent-2:#7c3aed;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html,body{height:100%;font-family:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#fff;background-color:var(--bg-dark);-webkit-font-smoothing:antialiased;}
+    body{background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat fixed; min-height:100vh; line-height:1.6;}
+    a{color:inherit;}
+    /* Skip link */
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;}
+    .skip-link:focus{left:8px;top:8px;width:auto;height:auto;padding:8px 12px;background:#000;color:#fff;border-radius:6px;z-index:9999;}
+    header.navbar{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:rgba(12,8,28,0.9);position:sticky;top:0;z-index:1200;border-bottom:1px solid rgba(255,255,255,0.03);}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--muted);}
+    .logo img{height:44px;width:auto;display:block;}
+    .brand-heading{font-family:'Pacifico',cursive;font-size:1.15rem;color:#fff;}
+    nav ul{display:flex;gap:12px;list-style:none;align-items:center;}
+    nav a{padding:8px 10px;border-radius:8px;text-decoration:none;font-weight:600;color:#fff;}
+    nav a[aria-current="page"], nav a:hover{background:var(--accent-2);}
+    .donate-btn{background:linear-gradient(90deg,var(--accent-2),#ff9ecf);padding:8px 12px;border-radius:10px;font-weight:800;color:#fff;}
+    /* Mobile menu */
+    #menu-toggle{position:absolute;left:-9999px;}
+    .menu-icon{display:none;width:34px;height:30px;align-items:center;justify-content:center;cursor:pointer;}
+    .menu-icon span{display:block;width:22px;height:2.75px;background:#fff;margin:4px 0;border-radius:2px;}
+    @media(max-width:880px){
+      .menu-icon{display:flex;}
+      nav ul{display:none;flex-direction:column;position:fixed;right:14px;top:64px;background:rgba(6,4,22,0.95);padding:12px;border-radius:10px;min-width:220px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+      #menu-toggle:checked + .menu-icon + nav ul{display:flex;}
+      nav ul li a{display:block;padding:10px 14px;text-align:center;}
+    }
+    .hero{position:relative;min-height:32vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px 18px;}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg, rgba(45,34,90,0.72) 40%, rgba(124,58,237,0.45) 100%);z-index:0;}
+    .hero-content{position:relative;z-index:1;max-width:980px;}
+    .hero-content h1{font-family:'Pacifico',cursive;font-size:2.4rem;color:var(--accent);margin-bottom:0.5rem;}
+    .section{max-width:1100px;margin:22px auto;padding:18px;border-radius:12px;background:rgba(0,0,0,0.28);}
+    .section-title{font-size:1.6rem;text-align:center;margin-bottom:14px;color:var(--accent);}
+    .cards-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+    .card{background:var(--panel);padding:14px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.45);}
+    .card h3{color:var(--accent-2);margin-bottom:8px;}
+    .meet-team-btn{display:inline-block;font-family:'Pacifico',cursive;background:linear-gradient(90deg,var(--accent-2),#ff9ecf);color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:800;margin-top:18px;}
+    footer.ultra-footer{background:#071026;padding:28px 18px;color:#fff;margin-top:22px;}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1100px;margin:0 auto 12px;}
+    .footer-col h3{color:var(--accent);margin-bottom:8px;}
+    .footer-col ul{list-style:none;padding:0;margin:0;}
+    .footer-col a{color:inherit;text-decoration:none;}
+    .footer-bottom{text-align:center;color:rgba(255,255,255,0.85);margin-top:12px;}
+    @media(max-width:520px){ .hero-content h1{font-size:1.9rem;} }
+  </style>
 
 </head>
-
 <body>
 
-<header class="navbar">
-  <a href="index.html" class="logo">Kgokagano-Sechaba</a>
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="report.html">Report</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html" class="donate-btn">Donate</a></li>
-    </ul>
-  </nav>
-</header>
+  <a class="skip-link" href="#maincontent">Skip to content</a>
 
-<div class="hero">
-  <div class="hero-content">
-    <h1>About Kgokagano-Sechaba</h1>
-    <p>Together we support, empower, and protect survivors of Gender-Based Violence.</p>
-  </div>
-</div>
+  <header class="navbar" role="banner">
+    <div class="nav-container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1100px;margin:0 auto;width:100%;">
+      <a href="/" class="logo" aria-label="Kgokagano-Sechaba home">
+        <img src="/logo2.png" alt="Kgokagano-Sechaba logo">
+        <span class="brand-heading">Kgokagano-Sechaba</span>
+      </a>
 
-<section class="section">
-  <h2 class="section-title">Who We Are</h2>
-  <p>
-    Kgokagano-Sechaba is a non-profit organization addressing Gender-Based Violence (GBV) specifically in the Lawley Extension 2 community and surrounding areas.
-    Our mission is to empower individuals, particularly women and survivors, to break free from abuse and build a brighter future.
-  </p>
-</section>
+      <input type="checkbox" id="menu-toggle" aria-hidden="true">
+      <label for="menu-toggle" class="menu-icon" aria-hidden="true" aria-label="Toggle menu" title="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
 
-<section class="section">
-  <h2 class="section-title">Key Components</h2>
-  <div class="cards-grid">
-    <div class="card">
-      <h3>Problem Statement</h3>
-      <p>GBV is a serious issue in South Africa, with many individuals facing physical, emotional, and psychological abuse.</p>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="/" aria-current="false">Home</a></li>
+          <li><a href="/about.html" aria-current="page">About</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/report.html">Report</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/donate.html" class="donate-btn">Donate</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="card">
-      <h3>Goals & Objectives</h3>
-      <p>Short-term: Provide shelter, skills programs, and counseling. Long-term: Reduce GBV, empower survivors, and build a culture of respect.</p>
-    </div>
-    <div class="card">
-      <h3>Programs & Services</h3>
-      <p>Shelter services, skills development, entrepreneurship, counseling, and emotional support.</p>
-    </div>
-    <div class="card">
-      <h3>Target Market</h3>
-      <p>Women and survivors of Gender-Based Violence within the community.</p>
-    </div>
-    <div class="card">
-      <h3>Funding Strategy</h3>
-      <p>Grants, donations, fundraising events, and partnerships.</p>
-    </div>
-    <div class="card">
-      <h3>Marketing Strategy</h3>
-      <p>Social media, community outreach, and partnerships with local organizations.</p>
-    </div>
-  </div>
+  </header>
 
-  <!-- Meet Our Team Button -->
-  <div style="text-align:center;">
-    <a href="team.html" class="meet-team-btn">Meet Our Team</a>
-  </div>
-</section>
+  <main id="maincontent" role="main">
+    <section class="hero" aria-labelledby="about-hero-heading">
+      <div class="hero-content">
+        <h1 id="about-hero-heading">About Kgokagano-Sechaba</h1>
+        <p>Together we support, empower and protect survivors of gender-based violence in Lawley Extension 2 and the surrounding communities.</p>
+      </div>
+    </section>
 
-<section class="section">
-  <h2 class="section-title">Code of Conduct</h2>
-  <p><strong>Confidentiality:</strong> We protect sensitive information.</p>
-  <p><strong>Professionalism:</strong> Staff and volunteers maintain high standards of behavior.</p>
-  <p><strong>Non-Discrimination:</strong> Everyone is treated with dignity and fairness.</p>
-  <p><strong>Transparency:</strong> We ensure open operations and financial accountability.</p>
-  <p><strong>Reporting Violations:</strong> If you have concerns, please contact the organization immediately.</p>
-</section>
+    <section class="section" aria-labelledby="who-we-are">
+      <h2 id="who-we-are" class="section-title">Who We Are</h2>
+      <p>Kgokagano-Sechaba Community Centre is a registered non-profit organisation working to prevent and respond to gender-based violence in Lawley Extension 2 and neighbouring areas. We deliver trauma-informed counselling, safe temporary shelter, legal referrals and skills development programs to help survivors rebuild safe, independent lives.</p>
+    </section>
 
-<footer class="ultra-footer" role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="report.html">Get Help Now</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="donate.html">Donate / Pledge</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+    <section class="section" aria-labelledby="key-components">
+      <h2 id="key-components" class="section-title">Key Components</h2>
 
-    <div class="footer-col footer-contact">
-      <h3>Contact Us</h3>
-      <p>24/7: <strong>065 966 6216</strong></p>
-      <p>Email: <a href="mailto:kgokagano.npo@gmail.com" style="color:#fff; text-decoration:underline;">kgokagano.npo@gmail.com</a></p>
-      <div class="social-icons">
-        <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" class="fa fa-facebook" aria-label="Facebook"></a>
+      <div class="cards-grid" role="list" aria-label="Core program components">
+        <article class="card" role="listitem" aria-labelledby="problem-statement">
+          <h3 id="problem-statement">Problem Statement</h3>
+          <p>Gender-based violence remains a serious and pervasive issue across South Africa. Many survivors face barriers to safety, justice and economic opportunity.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="goals-objectives">
+          <h3 id="goals-objectives">Goals &amp; Objectives</h3>
+          <p>Short-term: provide immediate safety, counselling and economic support. Long-term: reduce GBV in the community through prevention programs, survivor empowerment and partnerships.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="programs-services">
+          <h3 id="programs-services">Programs &amp; Services</h3>
+          <p>Temporary shelter, trauma-informed counselling, life and vocational skills training, legal advocacy and community awareness efforts.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="target-market">
+          <h3 id="target-market">Target Group</h3>
+          <p>Women and survivors of gender-based violence, particularly those living in or near Lawley Extension 2 who need confidential support and pathways to recovery.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="funding-strategy">
+          <h3 id="funding-strategy">Funding Strategy</h3>
+          <p>We fund our work through grants, donations, fundraising events and strategic partnerships with local organisations.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="marketing-strategy">
+          <h3 id="marketing-strategy">Outreach &amp; Partnerships</h3>
+          <p>We reach communities through social media, local events, schools and collaboration with service providers and civic groups.</p>
+        </article>
+      </div>
+
+      <div style="text-align:center;margin-top:18px;">
+        <a href="/team.html" class="meet-team-btn">Meet Our Team</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="code-of-conduct">
+      <h2 id="code-of-conduct" class="section-title">Code of Conduct</h2>
+      <div style="display:grid;gap:8px;">
+        <p><strong>Confidentiality:</strong> We protect sensitive information and only share when required for safety or by law.</p>
+        <p><strong>Professionalism:</strong> All staff and volunteers act with integrity and respect.</p>
+        <p><strong>Non-Discrimination:</strong> We welcome and support all survivors without bias.</p>
+        <p><strong>Transparency:</strong> We maintain clear reporting and financial accountability.</p>
+        <p><strong>Reporting Violations:</strong> If you have concerns, contact us immediately at <a href="mailto:kgokagano.npo@gmail.com">kgokagano.npo@gmail.com</a> or call 065 966 6216.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ultra-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/report.html">Get Help Now</a></li>
+          <li><a href="/about.html" aria-current="page">About Us</a></li>
+          <li><a href="/team.html">Our Team</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/donate.html">Donate / Pledge</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h3>Contact Us</h3>
+        <p>24/7: <strong>065 966 6216</strong></p>
+        <p>Email: <a href="mailto:kgokagano.npo@gmail.com" style="text-decoration:underline;color:inherit;">kgokagano.npo@gmail.com</a></p>
+        <div class="social-icons" aria-label="Social links">
+          <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener" aria-label="Facebook" class="fa fa-facebook" style="text-decoration:none;padding:6px;background:rgba(0,0,0,0.2);border-radius:6px;"></a>
+          <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener" aria-label="Instagram" class="fa fa-instagram" style="text-decoration:none;padding:6px;background:rgba(0,0,0,0.2);border-radius:6px;margin-left:6px;"></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>GBV in South Africa</h3>
+        <p>South Africa faces high rates of gender-based violence. Kgokagano-Sechaba provides trauma-informed counselling, temporary shelter, legal advocacy and community awareness programs to address these challenges.</p>
       </div>
     </div>
 
-    <div class="footer-col">
-      <h3>GBV in South Africa</h3>
-      <p>South Africa faces high rates of gender-based violence. Kgokagano-Sechaba provides trauma-informed counselling, temporary shelter, legal advocacy, and community awareness programs.</p>
+    <div class="footer-bottom">
+      © 2025 Kgokagano-Sechaba Community Centre — Empowering Survivors, Building Hope
+      <p style="margin-top:6px;">NPO Registration Number: 325-667</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    © 2025 Kgokagano-Sechaba Community Centre — Empowering Survivors, Building Hope
-   <p>NPO Registration Number: 325-667</p> 
-  </div>
-</footer>
-
+  <!-- Small script: close mobile menu when clicking nav links (improves UX on phones) -->
+  <script>
+    document.addEventListener('click', function(e){
+      if(!e.target.matches('nav a')) return;
+      var toggle = document.getElementById('menu-toggle');
+      if(toggle && toggle.checked) toggle.checked = false;
+    });
+  </script>
 </body>
 </html>
