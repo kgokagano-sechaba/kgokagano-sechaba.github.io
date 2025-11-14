@@ -3,7 +3,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://kgokagano-sechaba.github.io/index.html</loc>
+    <loc>https://kgokagano-sechaba.github.io/</loc>
     <priority>1.0</priority>
   </url>
 
@@ -41,7 +41,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Contact & Report & Donate Pages -->
+  <!-- Contact, Report & Donate Pages -->
   <url>
     <loc>https://kgokagano-sechaba.github.io/contact.html</loc>
     <priority>0.8</priority>
