@@ -4,140 +4,183 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO Meta Tags -->
+<!-- SEO Meta Tags (unchanged) -->
 <title>Kgokagano-Sechaba | Services</title>
 <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 <meta name="description" content="Explore the range of services offered by Kgokagano-Sechaba, designed to empower the community and enhance skills.">
 <meta name="keywords" content="services, Kgokagano-Sechaba, community support, skills, training, programs">
 <meta name="author" content="Kgokagano-Sechaba Community Centre">
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph / Twitter (unchanged) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kgokagano-Sechaba | Services">
 <meta property="og:description" content="Explore the range of services offered by Kgokagano-Sechaba, designed to empower the community and enhance skills.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80">
 <meta property="og:url" content="https://kgokagano-sechaba.github.io/services.html">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Kgokagano-Sechaba | Services">
 <meta name="twitter:description" content="Explore the range of services offered by Kgokagano-Sechaba, designed to empower the community and enhance skills.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80">
 
 <!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/3e7e0b7e2e.js" crossorigin="anonymous" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Styles -->
+<!-- Styles (copied and adapted from Home page) -->
 <style>
-/* Keep your existing CSS exactly as it was */
+:root{
+  --bg-dark:#0b1220;
+  --panel:rgba(45,34,90,0.72);
+  --muted:rgba(255,255,255,0.88);
+  --accent:#f472b6;
+  --accent-2:#7c3aed;
+}
+
 *{box-sizing:border-box;margin:0;padding:0;}
-html,body{height:100%;font-family:'Montserrat',sans-serif;color:#fff;line-height:1.6;}
+html, body{height:100%; font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; color:#fff;}
 body{
-  background:url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat fixed;
+  background-color: #071026;
+  -webkit-font-smoothing:antialiased;
   min-height:100vh;
+  position:relative;
 }
-/* Navbar, hero, cards, CTA, footer CSS remain unchanged (copy your full existing CSS here) */
-...
+
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: translateZ(0);
+}
+
+/* Sections above background */
+header, .hero, .section, .call-to-action, footer { position: relative; z-index: 1; background: transparent; }
+
+/* NAVBAR */
+header.navbar{
+  position:sticky;
+  top:0;
+  z-index:1200;
+  background:rgba(12,8,28,0.85);
+  padding:12px 20px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+.logo-link{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--muted);}
+.logo-img-nav{height:44px;width:auto;}
+.brand-heading{font-family:'Pacifico',cursive;font-size:1.2rem;color:#fff;}
+#menu-toggle{position:absolute;left:-9999px;}
+.menu-icon{display:none;width:34px;height:30px;align-items:center;justify-content:center;cursor:pointer;}
+.menu-icon span{display:block;width:22px;height:2.75px;background:#fff;margin:4px 0;border-radius:2px;}
+nav ul{display:flex;gap:14px;list-style:none;align-items:center;}
+nav ul li a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600;}
+nav ul li a.active, nav ul li a:hover{background: linear-gradient(90deg,var(--accent-2),#ff9ecf);}
+.donate-btn{background: linear-gradient(90deg,var(--accent-2),#ff9ecf);color:#fff;padding:8px 12px;border-radius:10px;font-weight:800;}
+@media(max-width:880px){
+  .menu-icon{display:flex;}
+  nav ul{display:none;flex-direction:column;position:fixed;right:14px;top:64px;background:rgba(6,4,22,0.95);padding:12px;border-radius:10px;min-width:200px;box-shadow:0 10px 30px rgba(0,0,0,0.6); z-index:1500;}
+  #menu-toggle:checked + .menu-icon + nav ul{display:flex;}
+  nav ul li a{display:block;padding:10px 14px;text-align:center;}
+}
+
+/* HERO */
+.hero{position:relative;min-height:56vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 20px;}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.18);
+  z-index:0;
+}
+.hero-content{position:relative;z-index:1;max-width:980px;padding:12px;}
+.hero-content h1{font-family:'Pacifico',cursive;font-size:3.2rem;color:var(--accent);margin-bottom:0.6rem;text-shadow:0 6px 28px rgba(0,0,0,0.45);}
+.hero-content p{color:rgba(255,255,255,0.95);font-size:1.1rem;text-shadow:0 6px 20px rgba(0,0,0,0.28);}
+
+/* SECTIONS & CARDS */
+.section{max-width:1100px;margin:28px auto;padding:0 18px;}
+.section-title{font-size:1.95rem;text-align:center;margin-bottom:18px;color:#fff;}
+.cards-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.card{background:var(--panel);padding:18px;border-radius:12px;box-shadow:0 8px 26px rgba(0,0,0,0.5);transition:transform .28s ease,box-shadow .28s ease;animation:fadeUp .6s ease both;}
+.card h3{color:var(--accent);margin-bottom:8px;}
+.card p{color:var(--muted);margin-bottom:12px;}
+.learn-more{font-family:'Pacifico',cursive;background:var(--accent-2);color:#fff;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block;}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 48px rgba(0,0,0,0.6);}
+
+/* CALL TO ACTION */
+.call-to-action{background:rgba(0,0,0,0.48);padding:26px;border-radius:14px;text-align:center;margin:22px auto;max-width:980px;}
+.btn{font-family:'Pacifico',cursive;background:linear-gradient(90deg,var(--accent-2),#ff9ecf);color:#fff;padding:10px 18px;border-radius:12px;text-decoration:none;font-weight:800;transition: transform 0.25s ease, box-shadow 0.25s ease;}
+.btn:hover{transform: translateY(-3px) scale(1.05); box-shadow: 0 12px 28px rgba(0,0,0,0.5);}
+
+/* FOOTER */
+footer.ultra-footer{background:#0b1220;color:#fff;padding:36px 20px 20px;font-size:0.9rem;position:relative;z-index:2;}
+.footer-grid{max-width:1200px;margin:0 auto;display:flex;gap:28px;justify-content:space-between;flex-wrap:wrap;}
+.footer-col{flex:1 1 220px;min-width:180px;}
+.footer-col h3{font-size:1rem;margin-bottom:12px;letter-spacing:0.6px;}
+.footer-col ul{list-style:none;padding:0;margin:0;}
+.footer-col li{margin-bottom:6px;}
+.footer-col a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600;}
+.footer-col a:hover{text-decoration:underline;}
+.social-icons{display:flex;gap:10px;margin-top:10px;}
+.social-icons a{color:#fff;font-size:1.3rem;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:6px;background:#222;transition:transform .25s ease;}
+.social-icons a:hover{transform:translateY(-4px) scale(1.08);}
+.footer-bottom{text-align:center;margin-top:18px;color:rgba(255,255,255,0.85);}
+
+@media(max-width:880px){
+  .hero-content h1{font-size:2.1rem;}
+  .footer-grid{flex-direction:column;align-items:center;text-align:center;gap:18px;}
+  .footer-col{min-width:unset;}
+}
+@media(max-width:520px){
+  .hero-content h1{font-size:1.8rem;}
+  .footer-bottom{font-size:0.82rem;}
+}
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
 </style>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VR26VVKDB5"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-VR26VVKDB5');
-</script>
-
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Kgokagano-Sechaba Community Centre",
-  "url": "https://kgokagano-sechaba.github.io/",
-  "logo": "https://kgokagano-sechaba.github.io/images/logo.svg",
-  "sameAs": ["https://facebook.com/yourprofile"],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "telephone": "+27 65 966 6216",
-    "contactType": "customer support",
-    "availableLanguage": ["en"]
-  }]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://kgokagano-sechaba.github.io/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://kgokagano-sechaba.github.io/services.html"
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "provider": {
-    "@type": "Organization",
-    "name": "Kgokagano-Sechaba Community Centre",
-    "url": "https://kgokagano-sechaba.github.io/"
-  },
-  "serviceType": [
-    "Shelter & Essentials",
-    "Counseling & Therapy",
-    "Skills Training & Empowerment",
-    "Legal Support & Advocacy",
-    "Medical Support & Referrals",
-    "Community Outreach"
-  ],
-  "areaServed": "South Africa",
-  "url": "https://kgokagano-sechaba.github.io/services.html"
-}
-</script>
 </head>
-
 <body>
-<header class="navbar">
-  <a href="index.html" class="logo">Kgokagano-Sechaba</a>
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon"><span></span><span></span><span></span></label>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="report.html">Report</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="donate.html" class="donate-btn">Donate</a></li>
-    </ul>
-  </nav>
+
+<!-- NAVBAR -->
+<header class="navbar" role="banner">
+  <div class="nav-container">
+    <a href="index.html" class="logo-link" aria-label="Kgokagano-Sechaba home">
+      <img src="logo2.png" alt="Kgokagano-Sechaba logo" class="logo-img-nav">
+      <span class="brand-heading">Kgokagano-Sechaba</span>
+    </a>
+    <input type="checkbox" id="menu-toggle" aria-hidden="true">
+    <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="donate-btn">Donate</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<div class="hero-content">
-  <h1>Our Core Services</h1>
-  <p>Providing shelter, emotional support, legal guidance and empowerment for survivors of Gender-Based Violence.</p>
-</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Our Core Services</h1>
+    <p>Providing shelter, emotional support, legal guidance and empowerment for survivors of Gender-Based Violence.</p>
+  </div>
+</section>
 
-<section class="section">
-  <h2 class="section-title">How We Support You</h2>
+<!-- SERVICES CARDS -->
+<section class="section" aria-labelledby="services">
+  <h2 id="services" class="section-title">How We Support You</h2>
   <div class="cards-grid">
     <div class="card">
       <h3>Shelter & Essentials</h3>
@@ -172,12 +215,14 @@ gtag('config', 'G-VR26VVKDB5');
   </div>
 </section>
 
-<section class="call-to-action">
-  <h2>Join Our Mission</h2>
+<!-- CALL TO ACTION -->
+<section class="call-to-action" aria-labelledby="join">
+  <h2 id="join">Join Our Mission</h2>
   <p>Become a volunteer, donor or partner and help us support survivors.</p>
   <a href="enroll.html" class="btn">Get Involved</a>
 </section>
 
+<!-- FOOTER -->
 <footer class="ultra-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-col">
@@ -194,9 +239,10 @@ gtag('config', 'G-VR26VVKDB5');
     <div class="footer-col footer-contact">
       <h3>Contact Us</h3>
       <p>24/7: <strong>065 966 6216</strong></p>
-      <p>Email: <a href="mailto:kgokagano.npo@gmail.com" style="color:#fff; text-decoration:underline;">kgokagano.npo@gmail.com</a></p>
+      <p>Email: <a href="mailto:kgokagano.npo@gmail.com">kgokagano.npo@gmail.com</a></p>
       <div class="social-icons">
-        <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" class="fa fa-facebook" aria-label="Facebook"></a>
+        <a href="https://facebook.com/yourprofile" target="_blank" class="fa fa-facebook" aria-label="Facebook"></a>
+        <a href="https://instagram.com/yourprofile" target="_blank" class="fa fa-instagram" aria-label="Instagram"></a>
       </div>
     </div>
     <div class="footer-col">
@@ -209,5 +255,16 @@ gtag('config', 'G-VR26VVKDB5');
     <p>NPO Registration Number: 325-667</p>
   </div>
 </footer>
+
+<script>
+  // Close mobile nav when clicking inside
+  document.addEventListener('click', function(e){
+    if(e.target.closest && e.target.closest('nav')){
+      var toggle = document.getElementById('menu-toggle');
+      if(toggle && toggle.checked) toggle.checked = false;
+    }
+  });
+</script>
+
 </body>
 </html>
